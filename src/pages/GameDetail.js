@@ -16,13 +16,25 @@ function GameDetail() {
   //access the game data with url and display every render...
   useEffect(() => {
     const currentGame = games.filter((GameData) => GameData.url === url);
-    setGame(currentGame);
+    setGame(currentGame[0]);
   }, [games, url]);
+  console.log(game);
   return (
-    <div>
-      <h1>Game Detail</h1>
-    </div>
+    <>
+      {/* If game is avaliable show up the bottom code... */}
+      {game && (
+        <Details>
+          <Headline>
+            <h2>{game.Title}</h2>
+            <img src={game.secondCover} alt="" />
+          </Headline>
+        </Details>
+      )}
+    </>
   );
 }
 
+const Details = styled.div``;
+
+const Headline = styled.div``;
 export default GameDetail;
