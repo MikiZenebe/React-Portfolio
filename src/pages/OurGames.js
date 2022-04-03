@@ -9,7 +9,7 @@ function OurGames() {
         <h2>Cyber Punk</h2>
         <div className="line"></div>
 
-        <Link to="">
+        <Link to="/game/cyber">
           <img
             src="https://cdn.givemesport.com/wp-content/uploads/2022/02/Cyberpunk-2077-Xbox.png"
             alt="icon"
@@ -21,7 +21,7 @@ function OurGames() {
         <h2>Watchdogs Legion</h2>
         <div className="line"></div>
 
-        <Link to="">
+        <Link to="/game/watch">
           <img
             src="https://goto.game/wp-content/uploads/2021/03/watch2.jpg"
             alt="icon"
@@ -33,7 +33,7 @@ function OurGames() {
         <h2>Far Cry 6</h2>
         <div className="line"></div>
 
-        <Link to="">
+        <Link to="/game/far">
           <img
             src="https://i.ytimg.com/vi/qjSM3Lp7EhI/maxresdefault.jpg"
             alt="icon"
