@@ -3,6 +3,10 @@ import styled from "styled-components";
 import { useLocation, Link } from "react-router-dom";
 import GameData from "../GameData";
 
+//Framer Motion
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
+
 function GameDetail() {
   const location = useLocation();
   const url = location.pathname;
@@ -23,7 +27,7 @@ function GameDetail() {
     <>
       {/* If game is avaliable show up the bottom code... */}
       {game && (
-        <Details>
+        <Details variants={pageAnimation} initial="hidden" animate="show">
           <Headline>
             <h2>{game.Title}</h2>
 
@@ -47,7 +51,7 @@ function GameDetail() {
   );
 }
 
-const Details = styled.div`
+const Details = styled(motion.div)`
   color: white;
 `;
 

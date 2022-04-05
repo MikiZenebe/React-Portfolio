@@ -2,9 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+//Framer Motion
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
+
 function OurGames() {
   return (
-    <Work>
+    <Work exit="exit" variants={pageAnimation} initial="hidden" animate="show">
       <Game>
         <h2>Cyber Punk</h2>
         <div className="line"></div>
@@ -44,7 +48,7 @@ function OurGames() {
   );
 }
 
-const Work = styled.div`
+const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 7.5rem;

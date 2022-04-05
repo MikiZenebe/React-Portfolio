@@ -2,23 +2,31 @@ import React from "react";
 //Import Style
 import { About, Description, Hide, Image } from "../styles";
 
+//Framer Motion
+import { motion } from "framer-motion";
+
 function AboutSection() {
   return (
     <About>
       <Description>
-        <div className="title">
+        <motion.div
+          className="title"
+          variants={ContDiv}
+          initial="hidden"
+          animate="show"
+        >
           <Hide>
-            <h2>We work to make</h2>
+            <motion.h2 variants={TitleAnim}>We work to make</motion.h2>
           </Hide>
           <Hide>
-            <h2>
-              your <span>gaming </span> dream comes
-            </h2>
+            <motion.h2 variants={TitleAnim}>
+              your <span>gaming </span>dream
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>true.</h2>
+            <motion.h2 variants={TitleAnim}> comes true.</motion.h2>
           </Hide>
-        </div>
+        </motion.div>
         <p>Visit us to play for any video game</p>
         <button>Contact us</button>
       </Description>
@@ -34,6 +42,19 @@ function AboutSection() {
   );
 }
 
-//Styled Component
-
+//Animation
+const TitleAnim = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 2 } },
+};
+const ContDiv = {
+  hidden: { x: 100 },
+  show: {
+    x: 0,
+    ease: "easeout",
+    staggerChildren: 1,
+    when: "afterChildren",
+    transition: { duration: 0.8 },
+  },
+};
 export default AboutSection;
