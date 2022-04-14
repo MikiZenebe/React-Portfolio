@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useLocation, Link } from "react-router-dom";
 import GameData from "../GameData";
+import { Hide } from "./OurGames";
 
 //Framer Motion
 import { motion } from "framer-motion";
-import { pageAnimation } from "../animation";
+import { pageAnimation, fade, photoAnim, lineAnim } from "../animation";
 
 function GameDetail() {
   const location = useLocation();
@@ -31,7 +32,9 @@ function GameDetail() {
           <Headline>
             <h2>{game.Title}</h2>
 
-            <img src={game.secondCover} alt="" />
+            <Hide>
+              <motion.img variants={photoAnim} src={game.secondCover} alt="" />
+            </Hide>
           </Headline>
           <Awards>
             {game.awards.map((award) => (
@@ -43,7 +46,9 @@ function GameDetail() {
             ))}
           </Awards>
           <ThirdImage>
-            <img src={game.thirdCover} alt="" />
+            <Hide>
+              <motion.img variants={photoAnim} src={game.thirdCover} alt="" />
+            </Hide>
           </ThirdImage>
         </Details>
       )}
