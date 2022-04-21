@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { About } from "../styles";
+import Toggle from "./Toggle";
 
 function FaqSection() {
   return (
@@ -8,18 +9,18 @@ function FaqSection() {
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
-
-      <div className="questions">
-        <h4>How can I play online</h4>
-        <div className="answers">
-          <p>
-            Lorem ipusm, dolor sit amet consectetur adispisicing Necessitatibus,
-            neque.
-          </p>
+      <Toggle>
+        <div className="questions">
+          <h4>How can I play online</h4>
+          <div className="answers">
+            <p>
+              Lorem ipusm, dolor sit amet consectetur adispisicing
+              Necessitatibus, neque.
+            </p>
+          </div>
+          <div className="faq-line"></div>
         </div>
-        <div className="faq-line"></div>
-      </div>
-
+      </Toggle>
       <div className="questions">
         <h4>Can I get the latest games</h4>
         <div className="answers">
