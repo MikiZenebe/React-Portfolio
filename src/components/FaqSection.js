@@ -2,10 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import { About } from "../styles";
 import Toggle from "./Toggle";
+import Scroll from "./Scroll";
+import { ScrollAnim } from "../animation";
 
 function FaqSection() {
+  const [element, controls] = Scroll();
   return (
-    <Faq>
+    <Faq
+      variants={ScrollAnim}
+      ref={element}
+      animate={controls}
+      initial="hidden"
+    >
       <h2>
         Any Questions <span>FAQ</span>
       </h2>

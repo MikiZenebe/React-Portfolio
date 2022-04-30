@@ -1,11 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+
+import Scroll from "./Scroll";
+import { fade } from "../animation";
 //Import Styles
 import { About, Description, Image } from "../styles";
 
 function ServicesSection() {
+  const [element, controls] = Scroll();
+
   return (
-    <Services>
+    <Services ref={element} variants={fade} animate={controls} initial="hidden">
       <Description>
         <h2>
           High <span>quality</span> services
