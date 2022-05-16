@@ -10,6 +10,7 @@ import GameDetail from "./pages/GameDetail";
 import { AnimatePresence } from "framer-motion";
 //Router
 import { Route, Routes, useLocation } from "react-router-dom";
+import ScrollTop from "./components/ScrollTop";
 
 function App() {
   const location = useLocation();
@@ -18,7 +19,7 @@ function App() {
     <div>
       <GlobalStyle />
       <NavSection />
-
+      <ScrollTop />
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<AboutUs />} />

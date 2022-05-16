@@ -5,8 +5,11 @@ import { Link } from "react-router-dom";
 //Framer Motion
 import { motion } from "framer-motion";
 import { pageAnimation, fade, photoAnim, lineAnim, slide } from "../animation";
+import Scroll from "../components/Scroll";
 
 function OurGames() {
+  const [element, controls] = Scroll();
+  const [element2, controls2] = Scroll();
   return (
     <Work exit="exit" variants={pageAnimation} initial="hidden" animate="show">
       <Frame1 variants={slide}></Frame1>
@@ -28,7 +31,7 @@ function OurGames() {
         </Link>
       </Game>
 
-      <Game>
+      <Game ref={element} variants={fade} animate={controls} initial="hidden">
         <motion.h2 variants={fade}>Watchdogs Legion</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
 
@@ -43,7 +46,7 @@ function OurGames() {
         </Link>
       </Game>
 
-      <Game>
+      <Game ref={element2} variants={fade} animate={controls2} initial="hidden">
         <motion.h2 variants={fade}>Far Cry 6</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
 
@@ -71,7 +74,7 @@ const Work = styled(motion.div)`
     color: white;
   }
 `;
-const Game = styled.div`
+const Game = styled(motion.div)`
   padding-bottom: 10rem;
 
   .line {
