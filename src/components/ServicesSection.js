@@ -42,17 +42,6 @@ function ServicesSection() {
             <p>lorem ipsum dolor sit amet.</p>
           </Card>
           {/* Card 4 */}
-          <Card>
-            <div className="icon">
-              <img
-                className="teamwork"
-                src="https://www.svgrepo.com/show/291852/people-teamwork.svg"
-                alt=""
-              />
-              <h3>Teamwork </h3>
-            </div>
-            <p>lorem ipsum dolor sit amet.</p>
-          </Card>
         </Cards>
       </Description>
       <Image>
@@ -74,11 +63,22 @@ const Services = styled(About)`
     width: 70%;
     padding: 2rem 0rem 4rem 0rem;
   }
+
+  @media (max-width: 1300px) {
+    margin: 2rem 0 0 0;
+    display: block;
+
+    text-align: center;
+  }
 `;
 
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 
 const Card = styled.div`
@@ -94,6 +94,10 @@ const Card = styled.div`
       padding: 1rem;
       border-radius: 5px;
     }
+  }
+
+  @media (max-width: 1300px) {
+    margin: 0 0 0 2rem;
   }
 `;
 export default ServicesSection;

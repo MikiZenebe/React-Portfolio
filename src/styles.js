@@ -13,6 +13,16 @@ export const About = styled(motion.div)`
   img {
     width: 100%;
   }
+
+  @media (max-width: 1300px) {
+    display: block;
+    padding: 0 0 0 1rem;
+    text-align: center;
+
+    img {
+      margin: 2rem 6rem 0 0;
+    }
+  }
 `;
 
 export const Description = styled.div`

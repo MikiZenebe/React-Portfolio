@@ -45,18 +45,5 @@ function AboutSection() {
 }
 
 //Animation
-const TitleAnim = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 2 } },
-};
-const ContDiv = {
-  hidden: { x: 100 },
-  show: {
-    x: 0,
-    ease: "easeout",
-    staggerChildren: 1,
-    when: "afterChildren",
-    transition: { duration: 0.8 },
-  },
-};
+
 export default AboutSection;

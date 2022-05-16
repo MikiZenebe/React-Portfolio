@@ -96,6 +96,14 @@ const Awards = styled.div`
   p {
     padding: 2rem 0rem;
   }
+
+  @media (max-width: 1300px) {
+    display: block;
+    margin: 0 0 0 0;
+    p {
+      font-size: 1rem;
+    }
+  }
 `;
 
 const AwardStyle = styled.div`
