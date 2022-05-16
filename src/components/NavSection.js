@@ -7,7 +7,7 @@ function NavSection() {
     <Nav>
       <h1>
         <Link to="/" id="logo">
-          Neon Games
+          Micky Games
         </Link>
       </h1>
       <ul>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 //Import Style
 import { About, Description, Hide, Image } from "../styles";
 
@@ -9,6 +10,9 @@ import { titleAnimatio, fade, photoAnim } from "../animation";
 function AboutSection() {
   return (
     <About>
+      <Helmet>
+        <title>About</title>
+      </Helmet>
       <Description>
         <motion.div>
           <Hide>

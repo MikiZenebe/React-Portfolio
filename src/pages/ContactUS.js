@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Helmet } from "react-helmet";
 //Animations
 import { motion } from "framer-motion";
 import { pageAnimation, titleAnimatio } from "../animation";
@@ -12,6 +12,9 @@ function ContactUS() {
       initial="hidden"
       animate="show"
     >
+      <Helmet>
+        <title>Contact </title>
+      </Helmet>
       <Title>
         <Hide>
           <motion.h2 variants={titleAnimatio}>Get in touch</motion.h2>

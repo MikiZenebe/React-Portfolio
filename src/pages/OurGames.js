@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
+import { Helmet } from "react-helmet";
 //Framer Motion
 import { motion } from "framer-motion";
 import { pageAnimation, fade, photoAnim, lineAnim, slide } from "../animation";
@@ -12,10 +12,14 @@ function OurGames() {
   const [element2, controls2] = Scroll();
   return (
     <Work exit="exit" variants={pageAnimation} initial="hidden" animate="show">
+      <Helmet>
+        <title>Our Games</title>
+      </Helmet>
       <Frame1 variants={slide}></Frame1>
       <Frame2 variants={slide}></Frame2>
       <Frame3 variants={slide}></Frame3>
       <Frame4 variants={slide}></Frame4>
+
       <Game>
         <motion.h2 variants={fade}>Cyber Punk</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
